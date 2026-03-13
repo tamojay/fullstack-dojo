@@ -1,0 +1,7 @@
+.progress-ring {
+  flex-shrink: 0;
+}
+
+.progress-ring__fill {
+  transition: stroke-dashoffset var(--transition-base);
+}

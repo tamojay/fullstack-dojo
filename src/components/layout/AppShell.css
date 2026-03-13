@@ -1,0 +1,31 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.app-shell__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 40;
+}
+
+.app-shell__content {
+  flex: 1;
+  min-width: 0;
+  padding: 16px;
+  padding-top: calc(48px + 16px); /* MobileHeader height + padding */
+}
+
+@media (min-width: 768px) {
+  .app-shell__overlay {
+    display: none;
+  }
+
+  .app-shell__content {
+    margin-left: var(--sidebar-width);
+    padding: 24px 28px;
+    padding-top: 24px;
+  }
+}
