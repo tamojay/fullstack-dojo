@@ -30,7 +30,7 @@
 .mobile-header__title {
   font-size: 14px;
   font-weight: 600;
-  font-family: var(--font-mono);
+  font-family: var(--font-heading);
   color: var(--text-primary);
   flex: 1;
 }
@@ -38,6 +38,7 @@
 .mobile-header__actions {
   display: flex;
   align-items: center;
+  gap: 8px;
   margin-left: auto;
 }
 

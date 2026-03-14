@@ -46,6 +46,7 @@
 .dsa-topic__title {
   font-size: 24px;
   font-weight: 700;
+  font-family: var(--font-heading);
   color: var(--text-primary);
   margin-bottom: 4px;
 }

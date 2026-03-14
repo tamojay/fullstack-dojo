@@ -21,6 +21,7 @@
 .section-header__title {
   font-size: 26px;
   font-weight: 700;
+  font-family: var(--font-heading);
   color: var(--text-primary);
   margin-bottom: 4px;
   line-height: 1.2;

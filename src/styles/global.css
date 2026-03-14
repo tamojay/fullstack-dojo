@@ -14,18 +14,17 @@
   --bg-tertiary: #ede8de;
   --bg-hover: #d8cfc3;
 
-  /* Text — palette: #1c1c1c (near-black) */
-  --text-primary: #1c1c1c;
-  --text-secondary: #5a4535;
-  --text-muted: #9e8c7a;
+  /* Text — palette: (near-black) */
+  --text-primary: #0a2e36;
+  --text-secondary: #e43f6f;
+  --text-muted: #806f5f;
 
-  /* Section accents — palette: #d9a83a (gold), #6a0204 (maroon) */
-  --accent-green: #d9a83a;   /* DSA */
-  --accent-purple: #6a0204;  /* Advanced DSA, Backend Design */
-  --accent-orange: #c07828;  /* JS Fundamentals */
-  --accent-blue: #8b6914;    /* React/Web, Frontend Design */
-  --accent-cyan: #b89040;    /* Frontend Coding */
-  --accent-red: #6a0204;     /* Hard difficulty */
+  --accent-green: #902d41; /* DSA */
+  --accent-purple: #6a0204; /* Advanced DSA, Backend Design */
+  --accent-orange: #c07828; /* JS Fundamentals */
+  --accent-blue: #8b6914; /* React/Web, Frontend Design */
+  --accent-cyan: #b89040; /* Frontend Coding */
+  --accent-red: #6a0204; /* Hard difficulty */
 
   /* Borders & Radius */
   --border: #d8cfc3;
@@ -38,8 +37,9 @@
   --sidebar-width: 260px;
 
   /* Fonts */
-  --font-mono: "JetBrains Mono", monospace;
-  --font-ui: "Inter", -apple-system, sans-serif;
+  --font-heading: "DynaPuff", cursive;
+  --font-mono: "Syne Mono", monospace;
+  --font-ui: "Syne Mono", monospace;
 
   /* Shadows */
   --shadow-card: 0 2px 8px rgba(28, 28, 28, 0.08);
@@ -93,6 +93,23 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  --bg-primary: #16110a;
+  --bg-secondary: #1e1710;
+  --bg-tertiary: #2a2014;
+  --bg-hover: #352818;
+
+  --text-primary: #f6f1e8;
+  --text-secondary: #c4a870;
+  --text-muted: #8a7050;
+
+  --border: #352818;
+  --border-light: #453525;
+
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* Focus ring */

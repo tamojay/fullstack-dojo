@@ -10,7 +10,7 @@
 .dashboard__title {
   font-size: 32px;
   font-weight: 700;
-  font-family: var(--font-mono);
+  font-family: var(--font-heading);
   color: var(--text-primary);
   margin-bottom: 6px;
 }
@@ -62,6 +62,7 @@
 .dashboard__card-title {
   font-size: 16px;
   font-weight: 600;
+  font-family: var(--font-heading);
   color: var(--text-primary);
   line-height: 1.3;
 }

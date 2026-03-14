@@ -1,5 +1,6 @@
 import { Menu } from "lucide-react";
 import { UserMenu } from "./UserMenu";
+import { ThemeToggle } from "./ThemeToggle";
 import "./MobileHeader.css";
 
 interface MobileHeaderProps {
@@ -18,6 +19,7 @@ export function MobileHeader({ onToggleSidebar }: MobileHeaderProps) {
       </button>
       <span className="mobile-header__title">⚡ fullstack-dojo</span>
       <div className="mobile-header__actions">
+        <ThemeToggle />
         <UserMenu />
       </div>
     </header>

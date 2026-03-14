@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { Sidebar } from "./Sidebar";
 import { MobileHeader } from "./MobileHeader";
 import { UserMenu } from "./UserMenu";
+import { ThemeToggle } from "./ThemeToggle";
 import "./AppShell.css";
 
 export function AppShell() {
@@ -21,6 +22,7 @@ export function AppShell() {
       )}
       <main className="app-shell__content">
         <div className="app-shell__topbar">
+          <ThemeToggle />
           <UserMenu />
         </div>
         <div className="app-shell__page">
