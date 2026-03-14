@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Sidebar } from "./Sidebar";
 import { MobileHeader } from "./MobileHeader";
+import { UserMenu } from "./UserMenu";
 import "./AppShell.css";
 
 export function AppShell() {
@@ -19,7 +20,12 @@ export function AppShell() {
         />
       )}
       <main className="app-shell__content">
-        <Outlet />
+        <div className="app-shell__topbar">
+          <UserMenu />
+        </div>
+        <div className="app-shell__page">
+          <Outlet />
+        </div>
       </main>
     </div>
   );

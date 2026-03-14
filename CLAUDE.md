@@ -218,7 +218,7 @@ export interface Topic {
 export interface SectionMeta {
   id: SectionId;
   title: string;
-  shortTitle: string; // abbreviated for sidebar (e.g., 'DSA', 'FE Coding')
+  shortTitle: string; // abbreviated for sidebar (e.g., 'Data Structures & Algorithms, 'FE Coding')
   icon: string; // Lucide icon name
   accent: string; // CSS variable reference (e.g., 'var(--accent-green)')
   path: string; // route path (e.g., '/dsa')

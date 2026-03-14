@@ -1,0 +1,112 @@
+.user-menu__trigger {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--bg-tertiary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.user-menu__trigger:hover {
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 3px rgba(192, 120, 40, 0.15);
+}
+
+.user-menu__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-menu__initials {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--accent-orange);
+  line-height: 1;
+}
+
+/* Dropdown content */
+.user-menu__content {
+  min-width: 210px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(28, 28, 28, 0.12);
+  padding: 6px;
+  z-index: 100;
+  animation: user-menu-in 120ms ease;
+}
+
+@keyframes user-menu-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.user-menu__profile {
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-menu__profile-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.user-menu__profile-email {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.user-menu__separator {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+}
+
+.user-menu__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-family: var(--font-ui);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  outline: none;
+  transition: background var(--transition-fast);
+}
+
+.user-menu__item:not([data-disabled]):hover,
+.user-menu__item:focus {
+  background: var(--bg-hover);
+}
+
+.user-menu__item--muted {
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.user-menu__item--danger {
+  color: var(--accent-red);
+}
+
+.user-menu__item--danger:hover {
+  background: rgba(106, 2, 4, 0.07);
+}
+
+.user-menu__arrow {
+  fill: var(--bg-secondary);
+}

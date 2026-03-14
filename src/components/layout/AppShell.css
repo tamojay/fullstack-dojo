@@ -14,8 +14,15 @@
 .app-shell__content {
   flex: 1;
   min-width: 0;
+  padding-top: 48px; /* MobileHeader height */
+}
+
+.app-shell__topbar {
+  display: none;
+}
+
+.app-shell__page {
   padding: 16px;
-  padding-top: calc(48px + 16px); /* MobileHeader height + padding */
 }
 
 @media (min-width: 768px) {
@@ -25,7 +32,22 @@
 
   .app-shell__content {
     margin-left: var(--sidebar-width);
+    padding-top: 0;
+  }
+
+  .app-shell__topbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px 28px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .app-shell__page {
     padding: 24px 28px;
-    padding-top: 24px;
   }
 }

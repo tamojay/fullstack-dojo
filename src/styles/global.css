@@ -8,28 +8,28 @@
 }
 
 :root {
-  /* Backgrounds */
-  --bg-primary: #f5f5fa;
+  /* Backgrounds — palette: #f6f1e8 (cream), #d8cfc3 (warm beige), #1c1c1c (near-black) */
+  --bg-primary: #f6f1e8;
   --bg-secondary: #ffffff;
-  --bg-tertiary: #eeeef6;
-  --bg-hover: #e6e6f0;
+  --bg-tertiary: #ede8de;
+  --bg-hover: #d8cfc3;
 
-  /* Text */
-  --text-primary: #1a1a2a;
-  --text-secondary: #5a5a7a;
-  --text-muted: #9090a8;
+  /* Text — palette: #1c1c1c (near-black) */
+  --text-primary: #1c1c1c;
+  --text-secondary: #5a4535;
+  --text-muted: #9e8c7a;
 
-  /* Section accents */
-  --accent-green: #00a85a;
-  --accent-purple: #7744dd;
-  --accent-orange: #d96820;
-  --accent-blue: #2266dd;
-  --accent-cyan: #0099bb;
-  --accent-red: #cc2244;
+  /* Section accents — palette: #d9a83a (gold), #6a0204 (maroon) */
+  --accent-green: #d9a83a;   /* DSA */
+  --accent-purple: #6a0204;  /* Advanced DSA, Backend Design */
+  --accent-orange: #c07828;  /* JS Fundamentals */
+  --accent-blue: #8b6914;    /* React/Web, Frontend Design */
+  --accent-cyan: #b89040;    /* Frontend Coding */
+  --accent-red: #6a0204;     /* Hard difficulty */
 
   /* Borders & Radius */
-  --border: #dcdce8;
-  --border-light: #c8c8dc;
+  --border: #d8cfc3;
+  --border-light: #e8e2d8;
   --radius: 8px;
   --radius-lg: 12px;
   --radius-sm: 6px;
@@ -42,8 +42,8 @@
   --font-ui: "Inter", -apple-system, sans-serif;
 
   /* Shadows */
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.07);
-  --shadow-glow-green: 0 0 20px rgba(0, 168, 90, 0.12);
+  --shadow-card: 0 2px 8px rgba(28, 28, 28, 0.08);
+  --shadow-glow-green: 0 0 20px rgba(217, 168, 58, 0.15);
 
   /* Transitions */
   --transition-fast: 150ms ease;

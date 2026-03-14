@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { AppShell } from "./components/layout/AppShell";
+import { RequireAuth } from "./components/auth/RequireAuth";
+import { SignIn } from "./pages/signin/SignIn";
 import { Dashboard } from "./pages/Dashboard";
 import { DsaIndex } from "./pages/dsa/DsaIndex";
 import { DsaTopic } from "./pages/dsa/DsaTopic";
@@ -13,16 +15,19 @@ import { BackendDesignIndex } from "./pages/backend-system-design/BackendDesignI
 export function App() {
   return (
     <Routes>
-      <Route element={<AppShell />}>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/dsa" element={<DsaIndex />} />
-        <Route path="/dsa/:topicId" element={<DsaTopic />} />
-        <Route path="/advanced-dsa" element={<AdvancedDsaIndex />} />
-        <Route path="/js-fundamentals" element={<JsFundamentalsIndex />} />
-        <Route path="/react-web" element={<ReactWebIndex />} />
-        <Route path="/frontend-coding" element={<FrontendCodingIndex />} />
-        <Route path="/frontend-system-design" element={<FrontendDesignIndex />} />
-        <Route path="/backend-system-design" element={<BackendDesignIndex />} />
+      <Route path="/signin" element={<SignIn />} />
+      <Route element={<RequireAuth />}>
+        <Route element={<AppShell />}>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/dsa" element={<DsaIndex />} />
+          <Route path="/dsa/:topicId" element={<DsaTopic />} />
+          <Route path="/advanced-dsa" element={<AdvancedDsaIndex />} />
+          <Route path="/js-fundamentals" element={<JsFundamentalsIndex />} />
+          <Route path="/react-web" element={<ReactWebIndex />} />
+          <Route path="/frontend-coding" element={<FrontendCodingIndex />} />
+          <Route path="/frontend-system-design" element={<FrontendDesignIndex />} />
+          <Route path="/backend-system-design" element={<BackendDesignIndex />} />
+        </Route>
       </Route>
     </Routes>
   );

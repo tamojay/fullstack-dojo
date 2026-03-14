@@ -1,0 +1,248 @@
+.signin {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  padding: 24px 16px;
+}
+
+.signin__card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.signin__logo {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.signin__title {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.signin__subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.signin__error {
+  font-size: 13px;
+  color: var(--accent-red);
+  background: rgba(106, 2, 4, 0.07);
+  border: 1px solid rgba(106, 2, 4, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  margin-bottom: 4px;
+}
+
+/* OAuth buttons */
+.signin__oauth {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.signin__oauth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  font-family: var(--font-ui);
+}
+
+.signin__oauth-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signin__oauth-btn:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.signin__oauth-btn--google {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.signin__oauth-btn--google:not(:disabled):hover {
+  background: var(--bg-tertiary);
+  border-color: var(--border-light);
+}
+
+.signin__oauth-btn--github {
+  background: #1c1c1c;
+  color: #f6f1e8;
+  border-color: #1c1c1c;
+}
+
+.signin__oauth-btn--github:not(:disabled):hover {
+  background: #333;
+  border-color: #333;
+}
+
+/* Divider */
+.signin__divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 4px;
+}
+
+.signin__divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.signin__divider-text {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Email OTP form */
+.signin__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.signin__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.signin__input {
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: var(--font-ui);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.signin__input:focus {
+  border-color: var(--accent-orange);
+}
+
+.signin__input--otp {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  letter-spacing: 0.25em;
+  text-align: center;
+}
+
+.signin__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  background: var(--accent-orange);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  margin-top: 4px;
+}
+
+.signin__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.signin__submit:not(:disabled):hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.signin__spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* OTP step header */
+.signin__otp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.signin__otp-sent {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.signin__otp-back {
+  font-size: 12px;
+  color: var(--accent-orange);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: var(--font-ui);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Dev OTP hint */
+.signin__dev-hint {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border: 1px dashed var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.signin__dev-label {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  background: var(--accent-orange);
+  color: #fff;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-right: 4px;
+}

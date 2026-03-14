@@ -32,6 +32,13 @@
   font-weight: 600;
   font-family: var(--font-mono);
   color: var(--text-primary);
+  flex: 1;
+}
+
+.mobile-header__actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 @media (min-width: 768px) {
